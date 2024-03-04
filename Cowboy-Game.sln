@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cowboy-Game", "Cowboy-Game.csproj", "{F3846FDA-B638-4557-84AE-7763A5583473}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cowboy-Game", "Cowboy-Game.csproj", "{08B7A322-1F83-4A43-81F2-9EC887204559}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3846FDA-B638-4557-84AE-7763A5583473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3846FDA-B638-4557-84AE-7763A5583473}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3846FDA-B638-4557-84AE-7763A5583473}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{F3846FDA-B638-4557-84AE-7763A5583473}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{F3846FDA-B638-4557-84AE-7763A5583473}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{F3846FDA-B638-4557-84AE-7763A5583473}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{08B7A322-1F83-4A43-81F2-9EC887204559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B7A322-1F83-4A43-81F2-9EC887204559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B7A322-1F83-4A43-81F2-9EC887204559}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{08B7A322-1F83-4A43-81F2-9EC887204559}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{08B7A322-1F83-4A43-81F2-9EC887204559}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{08B7A322-1F83-4A43-81F2-9EC887204559}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal
