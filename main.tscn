@@ -19,6 +19,7 @@ offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
@@ -27,6 +28,7 @@ offset_left = 100.0
 offset_top = -116.0
 offset_right = 140.0
 offset_bottom = -76.0
+metadata/_edit_use_anchors_ = true
 
 [node name="InventorySystem" type="Node" parent="."]
 script = ExtResource("2_w2jxc")
