@@ -5,14 +5,9 @@ public partial class Inventory : Node
 {
 	int current_inventory_slot = 0;
 	int current_cylinder_slot = 0; 
-	int[] inventory_slots = new int[6];
-	int[] cylinder_slots = new int[6];
+	Node[] inventory_slots = new Node[6];
+	Node[] cylinder_slots = new Node[6];
 	
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		
-	}
 	public override void _Input(InputEvent @event)
 	{
 		if(@event.IsActionReleased("action_1")){

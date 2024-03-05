@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbkd50xov3hu3"]
+
+[ext_resource type="PackedScene" uid="uid://i7846moibfho" path="res://Bullets/bullet.tscn" id="1_mw2nk"]
+[ext_resource type="PackedScene" uid="uid://cq6ikoi70jaoy" path="res://Player1.tscn" id="2_h1ax5"]
+
+[node name="Isak" type="Node2D"]
+
+[node name="Bullet" parent="." instance=ExtResource("1_mw2nk")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_h1ax5")]
