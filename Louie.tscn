@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2odfn44u40e2"]
+
+[ext_resource type="PackedScene" uid="uid://cq6ikoi70jaoy" path="res://Player/Player1.tscn" id="1_imweo"]
+[ext_resource type="PackedScene" uid="uid://i7846moibfho" path="res://Bullets/bullet.tscn" id="2_e8og7"]
+
+[node name="Louie" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_imweo")]
+
+[node name="Bullet" parent="." instance=ExtResource("2_e8og7")]
+position = Vector2(218, 19)

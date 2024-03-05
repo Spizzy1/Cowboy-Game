@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxr3olqbsva7x"]
+[gd_scene load_steps=3 format=3 uid="uid://cxr3olqbsva7x"]
+
+[ext_resource type="Script" path="res://Bullets/NormalBullet.cs" id="1_wy1ee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iaxib"]
 
 [node name="BulletReal" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+script = ExtResource("1_wy1ee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_iaxib")

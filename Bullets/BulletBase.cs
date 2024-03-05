@@ -2,7 +2,7 @@ using Godot;
 using System;
 using enums;
 
-public partial class BulletBase : Node
+public partial class BulletBase : RigidBody2D
 {
 	[Export]
 	public float bulletSpd;
