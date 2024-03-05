@@ -11,19 +11,26 @@ public partial class PlayerMovement : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+
 		Vector2 velocity = Velocity;
 
 
 
+		if(Input.IsActionPressed("action_1")!=true){
 
+			//har samma rad i "PlayerRotation", borde nog kunna göra de till samma.
+			Vector2 direction = Input.GetVector("move_left", "move_right", "move_up", "move_down");
+
+			velocity = direction * Speed;
+
+
+			Velocity = velocity;
+			MoveAndSlide();
+		}
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("move_left", "move_right", "move_up", "move_down");
 
-		velocity = direction * Speed;
-
-
-		Velocity = velocity;
-		MoveAndSlide();
 	}
+
+
 }
