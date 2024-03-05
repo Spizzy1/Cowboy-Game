@@ -23,6 +23,7 @@ public partial class PlayerShooting : Node
 			if(GetParent().GetNode<Inventory>("Inventory").get_current_cylinder() != null){
 				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
 
+
 				GetParent().GetNode<Inventory>("Inventory").change_cylinder();
 			}
 			else{
