@@ -8,3 +8,4 @@
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_imweo")]
 
 [node name="Bullet" parent="." instance=ExtResource("2_e8og7")]
+position = Vector2(218, 19)
