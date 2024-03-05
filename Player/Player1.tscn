@@ -32,8 +32,8 @@ offset_bottom = 40.0
 rotation = -0.785397
 metadata/_edit_use_anchors_ = true
 
-[node name="InventorySystem" parent="." instance=ExtResource("3_8qplj")]
-
-[node name="Gun" type="Node2D" parent="."]
-position = Vector2(20, 0)
+[node name="Gun" type="Node2D" parent="DirectionNode"]
+position = Vector2(56, 0)
 script = ExtResource("3_gdpny")
+
+[node name="InventorySystem" parent="." instance=ExtResource("3_8qplj")]

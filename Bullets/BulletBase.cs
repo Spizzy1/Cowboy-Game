@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class BulletBase : Node
+public partial class BulletBase : RigidBody2D
 {
 	public float bulletSpd;
 	public float bulletDmg;

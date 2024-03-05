@@ -14,4 +14,8 @@ public partial class NormalBullet : BulletBase
 	{
 		
 	}
+
+	public override void _PhysicsProcess(double delta){
+		LinearVelocity = new Vector2(0,30);
+	}
 }
