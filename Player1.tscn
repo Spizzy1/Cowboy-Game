@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq6ikoi70jaoy"]
+[gd_scene load_steps=6 format=3 uid="uid://cq6ikoi70jaoy"]
 
 [ext_resource type="Script" path="res://PlayerMovement.cs" id="1_5ssar"]
 [ext_resource type="Script" path="res://PlayerRotation.cs" id="2_igaig"]
 [ext_resource type="PackedScene" uid="uid://cpafdrjmwb0ho" path="res://Inventory/inventory_system.tscn" id="3_8qplj"]
+[ext_resource type="Script" path="res://PlayerShooting.cs" id="3_gdpny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xafrf"]
 size = Vector2(40, 40)
@@ -32,3 +33,6 @@ rotation = -0.785397
 metadata/_edit_use_anchors_ = true
 
 [node name="InventorySystem" parent="." instance=ExtResource("3_8qplj")]
+
+[node name="Gun" type="Node2D" parent="."]
+script = ExtResource("3_gdpny")
