@@ -11,16 +11,19 @@ public partial class PlayerShooting : Node
 
 	public override void _Input(InputEvent @event)
 	{
+		
 		if(@event.IsActionReleased("action_1")){
-			GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
+			
 
-			GD.Print(GetParent().GetNode<Inventory>("Inventory").inventory_slots[GetParent().GetNode<Inventory>("Inventory").current_inventory_slot]);
+			GD.Print(GetParent().GetNode<Inventory>("Inventory").get_current_cylinder());
 
 			//snälla framtida louie, 
 			//fixa dena fula (men roliga) kod. jag lämnar detta ärade uppdrag till dig för att jag (nutida louie) orkar inte just nu. 
 			//tack :))
-			if(GetParent().GetNode<Inventory>("Inventory").inventory_slots[GetParent().GetNode<Inventory>("Inventory").current_inventory_slot]!=null){
-				GD.Print("working");
+			if(GetParent().GetNode<Inventory>("Inventory").get_current_cylinder() != null){
+				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
+
+				GetParent().GetNode<Inventory>("Inventory").change_cylinder();
 			}
 			else{
 				GD.Print("not work (good)");

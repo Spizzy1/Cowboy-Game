@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq6ikoi70jaoy"]
+[gd_scene load_steps=6 format=3 uid="uid://cq6ikoi70jaoy"]
 
 [ext_resource type="Script" path="res://PlayerMovement.cs" id="1_5ssar"]
 [ext_resource type="Script" path="res://PlayerRotation.cs" id="2_igaig"]
 [ext_resource type="Script" path="res://PlayerShooting.cs" id="3_gdpny"]
+[ext_resource type="Script" path="res://Inventory/Inventory.cs" id="4_t0ir6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xafrf"]
 size = Vector2(40, 40)
@@ -33,3 +34,4 @@ rotation = -0.785397
 script = ExtResource("3_gdpny")
 
 [node name="Inventory" type="Node" parent="."]
+script = ExtResource("4_t0ir6")
