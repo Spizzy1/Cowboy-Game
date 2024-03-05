@@ -1,10 +1,16 @@
 using Godot;
 using System;
+using enums;
 
 public partial class BulletBase : Node
 {
+	[Export]
 	public float bulletSpd;
+	[Export]
 	public float bulletDmg;
+	[Export]
+	public bullets bullet_type;
+	
 
 	//public string[] bulletTypes=new string[1];
 
