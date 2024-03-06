@@ -6,7 +6,7 @@ public partial class NormalBullet : BulletBase
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		bulletSpd=100;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,6 +16,6 @@ public partial class NormalBullet : BulletBase
 	}
 
 	public override void _PhysicsProcess(double delta){
-		LinearVelocity = new Vector2(0,30);
+		LinearVelocity = Transform.X * 1 * bulletSpd;
 	}
 }

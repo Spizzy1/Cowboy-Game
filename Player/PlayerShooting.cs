@@ -1,7 +1,8 @@
 using Godot;
 using System;
+using enums;
 
-public partial class PlayerShooting : Node
+public partial class PlayerShooting : Node2D
 {
 
 
@@ -20,15 +21,15 @@ public partial class PlayerShooting : Node
 			//GD.Print(GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder());
 			var instance = scene.Instantiate<Node2D>();
 			
-			GetParent().GetParent().AddChild(instance);
-			//i will kill myself, i must fix this dog code
-			instance.GlobalPosition = GetNode<Node2D>("PlayerRotation").GlobalPosition;
-			instance.GlobalRotation = GetNode<Node2D>("PlayerRotation").GlobalRotation;
+			GetTree().Root.GetChild(0).AddChild(instance);
+			//i will live myself :), i  fix this 
+			instance.Position = GlobalPosition;
+			instance.Rotation = GlobalRotation;
 			
 			//snälla framtida louie, ö
 			//fixa dena fula (men roliga) kod. jag lämnar detta ärade uppdrag till dig för att jag (nutida louie) orkar inte just nu. 
 			//tack :))
-			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != Inventory.bullets.EMPTY){
+			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != bullets.EMPTY){
 				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
 
 				
