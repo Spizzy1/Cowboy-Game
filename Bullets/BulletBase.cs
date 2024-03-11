@@ -27,4 +27,12 @@ public partial class BulletBase : RigidBody2D
 	public override void _Process(double delta)
 	{
 	}
+
+    public override void _PhysicsProcess(double delta)
+    {
+		//if (BodyEntered(Node body))
+        base._PhysicsProcess(delta);
+    }
+
+	public override 
 }

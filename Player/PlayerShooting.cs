@@ -17,14 +17,6 @@ public partial class PlayerShooting : Node2D
 		
 		if(@event.IsActionReleased("action_1")){
 			
-			var scene = GD.Load<PackedScene>("res://Bullets/bullet_real.tscn");
-			//GD.Print(GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder());
-			var instance = scene.Instantiate<Node2D>();
-			
-			GetTree().Root.GetChild(0).AddChild(instance);
-			//i will live myself :), i  fix this 
-			instance.Position = GlobalPosition;
-			instance.Rotation = GlobalRotation;
 			
 			//snälla framtida louie, ö
 			//fixa dena fula (men roliga) kod. jag lämnar detta ärade uppdrag till dig för att jag (nutida louie) orkar inte just nu. 
@@ -32,6 +24,15 @@ public partial class PlayerShooting : Node2D
 			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != bullets.EMPTY){
 				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
 
+
+				// gör så att den här kod-klumpen faktiskt skjuter rätt kula, inte bara en basic
+				var scene = GD.Load<PackedScene>("res://Bullets/bullet_real.tscn");
+				//GD.Print(GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder());
+				var instance = scene.Instantiate<Node2D>();
+				GetTree().Root.GetChild(0).AddChild(instance);
+				//i will live myself :), i  fix this 
+				instance.Position = GlobalPosition;
+				instance.Rotation = GlobalRotation;
 				
 				GetParent().GetNode<Inventory>("InventorySystem").change_cylinder();
 			}
