@@ -30,13 +30,15 @@ public partial class Inventory : Node
 		{
 			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == bullets.EMPTY)
 			{
+				Node bullet = area.GetParent();
+				if(area.GetParent<BulletBase>().dormant){
+					area.Getpa
+					return;
+				}
+			}
+			//Do funny ERROR sound
+			//*WRONG BUZZER*
 
-			}
-			else
-			{
-				//Do funny ERROR sound
-				//*WRONG BUZZER*
-			}
 		}
 	}
 
