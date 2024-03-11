@@ -21,6 +21,12 @@ public partial class BulletBase : RigidBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		
+		dormant=false;
+
+		//GD.Print(this.GetNode<RigidBody2D>("BulletReal"));
+		this.BodyEntered += (body) => CollideEnter(body);
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,9 +36,15 @@ public partial class BulletBase : RigidBody2D
 
     public override void _PhysicsProcess(double delta)
     {
-		//if (BodyEntered(Node body))
+		
         base._PhysicsProcess(delta);
     }
+
+	public void CollideEnter(Node node)
+	{
+		GD.Print("test");
+		dormant=true;
+	}
 
 	//public override 
 }
