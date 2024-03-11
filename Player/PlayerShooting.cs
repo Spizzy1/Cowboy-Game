@@ -38,6 +38,7 @@ public partial class PlayerShooting : Node2D
 			}
 			else{
 				GD.Print("not work (good)");
+				GD.Print(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder());
 			}
 		}
 

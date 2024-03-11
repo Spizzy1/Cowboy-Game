@@ -34,5 +34,5 @@ public partial class BulletBase : RigidBody2D
         base._PhysicsProcess(delta);
     }
 
-	public override 
+	//public override 
 }
