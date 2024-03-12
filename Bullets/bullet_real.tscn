@@ -8,6 +8,8 @@
 collision_layer = 2
 collision_mask = 12
 gravity_scale = 0.0
+max_contacts_reported = 5
+contact_monitor = true
 script = ExtResource("1_wy1ee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

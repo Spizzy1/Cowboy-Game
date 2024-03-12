@@ -25,7 +25,7 @@ public partial class BulletBase : RigidBody2D
 		dormant=false;
 
 		//GD.Print(this.GetNode<RigidBody2D>("BulletReal"));
-		this.BodyEntered += (body) => CollideEnter(body);
+		BodyEntered += (body) => CollideEnter(body);
 		
 	}
 

@@ -21,8 +21,12 @@ public partial class NormalBullet : BulletBase
 
 	public override void _PhysicsProcess(double delta){
 
-		
-		LinearVelocity = Transform.X * 1 * bulletSpd;
+		if(dormant==false){
+			LinearVelocity = Transform.X * 1 * bulletSpd;
+		}
+		else{
+			LinearVelocity=Vector2.Zero;
+		}
 		//GD.Print(LinearVelocity);
 		
 	}
