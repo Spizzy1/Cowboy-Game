@@ -26,6 +26,8 @@ public partial class Inventory : Node
 	//Checks if you can pick up a bullet (and does so if you can)
 	void pickup_bullet()
 	{
+		GD.Print(GetNode<Area2D>("Pickup_Area").CollisionLayer);
+		GD.Print(GetNode<Area2D>("Pickup_Area").CollisionMask);
 		//den här triggar aldrig /Louie
 		foreach (Area2D area in GetNode<Area2D>("Pickup_Area").GetOverlappingAreas())
 		{
