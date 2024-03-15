@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2odfn44u40e2"]
+[gd_scene load_steps=4 format=3 uid="uid://b2odfn44u40e2"]
 
 [ext_resource type="PackedScene" uid="uid://cq6ikoi70jaoy" path="res://Player/Player1.tscn" id="1_imweo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k07i0"]
 size = Vector2(40, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_75lna"]
+radius = 122.037
 
 [node name="Louie" type="Node2D"]
 
@@ -32,3 +35,11 @@ collision_mask = 27
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ColorRect/StaticBody2D"]
 position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_k07i0")
+
+[node name="BulletCollectArea" type="Area2D" parent="."]
+position = Vector2(366, -132)
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletCollectArea"]
+shape = SubResource("CircleShape2D_75lna")

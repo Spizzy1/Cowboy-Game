@@ -26,18 +26,21 @@ public partial class Inventory : Node
 	//Checks if you can pick up a bullet (and does so if you can)
 	void pickup_bullet()
 	{
+		//den här triggar aldrig /Louie
 		foreach (Area2D area in GetNode<Area2D>("Pickup_Area").GetOverlappingAreas())
 		{
 			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == bullets.EMPTY)
 			{
-
+				GD.Print("pickedupbullet");
 			}
 			else
 			{
 				//Do funny ERROR sound
 				//*WRONG BUZZER*
+				GD.Print("No.");
 			}
 		}
+		
 	}
 
 	public bullets get_current_cylinder()

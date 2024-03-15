@@ -42,7 +42,7 @@ public partial class BulletBase : RigidBody2D
 
 	public void CollideEnter(Node node)
 	{
-		GD.Print("test");
+		//GD.Print("test");
 		dormant=true;
 	}
 

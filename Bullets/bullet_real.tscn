@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxr3olqbsva7x"]
+[gd_scene load_steps=4 format=3 uid="uid://cxr3olqbsva7x"]
 
 [ext_resource type="Script" path="res://Bullets/NormalBullet.cs" id="1_wy1ee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iaxib"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i4tc2"]
+radius = 55.0091
 
 [node name="BulletReal" type="RigidBody2D"]
 collision_layer = 2
@@ -27,3 +30,10 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BulletCollectArea" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletCollectArea"]
+shape = SubResource("CircleShape2D_i4tc2")
