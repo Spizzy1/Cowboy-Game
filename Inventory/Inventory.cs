@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using enums;
 
-public partial class Inventory : Node
+public partial class Inventory : Node2D
 {
 	//Current index of the revolver
 	int current_cylinder_slot = 0;
@@ -23,12 +23,13 @@ public partial class Inventory : Node
 		current_cylinder_slot %= 6;
 
 	}
+
 	//Checks if you can pick up a bullet (and does so if you can)
 	void pickup_bullet()
 	{
-		GD.Print(GetNode<Area2D>("Pickup_Area").CollisionLayer);
-		GD.Print(GetNode<Area2D>("Pickup_Area").CollisionMask);
-		//den här triggar aldrig /Louie
+		
+		GD.Print(GetNode<Area2D>("Pickup_Area").GetOverlappingAreas());
+		//den här triggar ALLTID!!!! (BRA) /Louie
 		foreach (Area2D area in GetNode<Area2D>("Pickup_Area").GetOverlappingAreas())
 		{
 			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == bullets.EMPTY)

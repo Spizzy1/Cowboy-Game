@@ -21,7 +21,7 @@ public partial class BulletBase : RigidBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		bullet_type= bullets.BASIC_BULLET;
 		dormant=false;
 
 		//GD.Print(this.GetNode<RigidBody2D>("BulletReal"));
@@ -45,6 +45,8 @@ public partial class BulletBase : RigidBody2D
 		//GD.Print("test");
 		dormant=true;
 	}
+
+
 
 	//public override 
 }
