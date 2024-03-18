@@ -28,10 +28,10 @@ public partial class PlayerShooting : Node2D
 			//snälla framtida louie, ö
 			//fixa dena fula (men roliga) kod. jag lämnar detta ärade uppdrag till dig för att jag (nutida louie) orkar inte just nu. 
 			//tack :))
-			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != bullets.EMPTY){
+			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != null){
 				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
 
-
+				
 				// gör så att den här kod-klumpen faktiskt skjuter rätt kula, inte bara en basic
 				
 				

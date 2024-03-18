@@ -11,7 +11,7 @@ public partial class Inventory : Node2D
 
 
 	//Internal list of above mentioned enum
-	bullets[] cylinder_slots = Enumerable.Repeat(bullets.EMPTY, 6).ToArray();
+	BulletBase[] cylinder_slots = new BulletBase[6];
 
 	//The amount of time spent holding the action button
 	float delta_release = 0;
@@ -32,9 +32,14 @@ public partial class Inventory : Node2D
 		//den här triggar ALLTID!!!! (BRA) /Louie
 		foreach (Area2D area in GetNode<Area2D>("Pickup_Area").GetOverlappingAreas())
 		{
-			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == bullets.EMPTY)
+			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == null)
 			{
+				BulletBase instance =  area.GetParent<BulletBase>();
+				BulletBase clone = instance.Duplicate() as BulletBase;
+				instance.QueueFree();
+				cylinder_slots[current_cylinder_slot] = clone;
 				GD.Print("pickedupbullet");
+
 			}
 			else
 			{
@@ -46,7 +51,7 @@ public partial class Inventory : Node2D
 		
 	}
 
-	public bullets get_current_cylinder()
+	public BulletBase get_current_cylinder()
 	{
 		return cylinder_slots[current_cylinder_slot];
 	}
