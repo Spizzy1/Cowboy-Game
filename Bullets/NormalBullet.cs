@@ -7,8 +7,7 @@ public partial class NormalBullet : BulletBase
 	public override void _Ready()
 	{
 		base._Ready();
-		
-		bulletSpd=1000;
+	
 		
 	}
 
