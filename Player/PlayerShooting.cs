@@ -17,7 +17,13 @@ public partial class PlayerShooting : Node2D
 		
 		if(@event.IsActionReleased("action_1")){
 			
-			var scene = GD.Load<PackedScene>("res://Bullets/bullet_real.tscn");
+			//snälla framtida louie, ö
+			//fixa dena fula (men roliga) kod. jag lämnar detta ärade uppdrag till dig för att jag (nutida louie) orkar inte just nu. 
+			//tack :))
+			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != null){
+				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
+
+				var scene = GD.Load<PackedScene>("res://Bullets/bullet_real.tscn");
 				//GD.Print(GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder());
 				var instance = scene.Instantiate<Node2D>();
 				GetTree().Root.GetChild(0).AddChild(instance);
@@ -25,17 +31,11 @@ public partial class PlayerShooting : Node2D
 				instance.Position = GlobalPosition;
 				instance.Rotation = GlobalRotation;
 
-			//snälla framtida louie, ö
-			//fixa dena fula (men roliga) kod. jag lämnar detta ärade uppdrag till dig för att jag (nutida louie) orkar inte just nu. 
-			//tack :))
-			if(GetParent().GetParent().GetNode<Inventory>("InventorySystem").get_current_cylinder() != null){
-				GD.Print("pew pew you shoot wow hahahahahah ahahahahha wowza!!!! yippeeeE!!!! yippe yahooooo!!!! wahooooo!!!!!");
 
-				
 				// gör så att den här kod-klumpen faktiskt skjuter rätt kula, inte bara en basic
 				
-				
-				GetParent().GetNode<Inventory>("InventorySystem").change_cylinder();
+				GetParent().GetParent().GetNode<Inventory>("InventorySystem").remove_bullet();
+				GetParent().GetParent().GetNode<Inventory>("InventorySystem").change_cylinder();
 			}
 			else{
 				GD.Print("not work (good)");

@@ -9,7 +9,6 @@ radius = 57.85
 script = ExtResource("1_6int3")
 bulletSpd = 20.0
 bulletDmg = 10.0
-bullet_type = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -20.0

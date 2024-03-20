@@ -14,6 +14,7 @@ gravity_scale = 0.0
 max_contacts_reported = 5
 contact_monitor = true
 script = ExtResource("1_wy1ee")
+bulletSpd = 1000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_iaxib")

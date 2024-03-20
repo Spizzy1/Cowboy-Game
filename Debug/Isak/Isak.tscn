@@ -8,5 +8,6 @@
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_66jkd")]
 
 [node name="BulletReal" parent="." instance=ExtResource("2_nvu42")]
+position = Vector2(219, 29)
 
 [editable path="CharacterBody2D"]

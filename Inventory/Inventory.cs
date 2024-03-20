@@ -19,6 +19,7 @@ public partial class Inventory : Node2D
 	//Publicly accessible function to rotate the chamber
 	public void change_cylinder()
 	{
+		GD.Print("change cylinder");
 		current_cylinder_slot += 1;
 		current_cylinder_slot %= 6;
 
@@ -52,7 +53,9 @@ public partial class Inventory : Node2D
 		}
 		
 	}
-
+	public void remove_bullet(){
+		cylinder_slots[current_cylinder_slot] = null;
+	}
 	public BulletBase get_current_cylinder()
 	{
 		return cylinder_slots[current_cylinder_slot];
@@ -61,7 +64,7 @@ public partial class Inventory : Node2D
 	{
 		if (@event.IsActionReleased("action_2"))
 		{
-			if (delta_release > 0.5f)
+			if (delta_release > 0.2f)
 			{
 				change_cylinder();
 			}
