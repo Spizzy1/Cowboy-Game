@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://e52hhxr6547x"]
+
+[ext_resource type="Script" path="res://Enemies/Stråtrövare.cs" id="1_gab82"]
+[ext_resource type="Script" path="res://Enemies/StateMachine.cs" id="2_aidwf"]
+[ext_resource type="Script" path="res://Enemies/Standoff.cs" id="3_h7n25"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li6y8"]
+size = Vector2(40, 40)
+
+[node name="Stråtrövare" type="CharacterBody2D"]
+script = ExtResource("1_gab82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_li6y8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="State Machine" type="Node" parent="."]
+script = ExtResource("2_aidwf")
+initialState = NodePath("Standoff")
+
+[node name="Standoff" type="Node" parent="State Machine"]
+script = ExtResource("3_h7n25")
+
+[node name="Aggressive" type="Node" parent="State Machine"]
+
+[node name="Attacking" type="Node" parent="State Machine"]

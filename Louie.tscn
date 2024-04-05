@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2odfn44u40e2"]
+[gd_scene load_steps=5 format=3 uid="uid://b2odfn44u40e2"]
 
 [ext_resource type="PackedScene" uid="uid://cq6ikoi70jaoy" path="res://Player/Player1.tscn" id="1_imweo"]
 [ext_resource type="PackedScene" uid="uid://d277qpqw87j4r" path="res://Rooms/Room1.tscn" id="2_0n2li"]
+[ext_resource type="PackedScene" uid="uid://e52hhxr6547x" path="res://Enemies/Stråtrövare.tscn" id="3_ra574"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k07i0"]
 size = Vector2(40, 40)
@@ -36,3 +37,6 @@ position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_k07i0")
 
 [node name="Room1" parent="." instance=ExtResource("2_0n2li")]
+
+[node name="Stråtrövare" parent="." instance=ExtResource("3_ra574")]
+position = Vector2(593, 369)
