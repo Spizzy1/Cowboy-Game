@@ -35,6 +35,8 @@ public partial class Inventory : Node2D
 		{
 			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == null)
 			{
+                //INSANE FEATURE CHANGE
+                if(area.GetParent<BulletBase>().dormant) return;
 				BulletBase instance =  area.GetParent<BulletBase>();
 				BulletBase clone = instance.Duplicate() as BulletBase;
 				instance.QueueFree();

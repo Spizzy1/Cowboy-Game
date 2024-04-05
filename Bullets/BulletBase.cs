@@ -13,7 +13,6 @@ public partial class BulletBase : RigidBody2D
 
 	public bool dormant; //temp title, alternatively "shooted", "isFired", "firedStatus", etc.
 
-	
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -22,8 +21,7 @@ public partial class BulletBase : RigidBody2D
 
 		//GD.Print(this.GetNode<RigidBody2D>("BulletReal"));
 		BodyEntered += (body) => CollideEnter(body);
-		
-		
+        
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
