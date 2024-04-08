@@ -9,7 +9,7 @@ public partial class Inventory : Node2D
 	int current_cylinder_slot = 0;
 	//Shows bullet type, might wrap it in a global class later
 
-
+    
 	//Internal list of above mentioned enum
 	BulletBase[] cylinder_slots = new BulletBase[6];
 
@@ -24,7 +24,7 @@ public partial class Inventory : Node2D
 		current_cylinder_slot %= 6;
 
 	}
-
+     
 	//Checks if you can pick up a bullet (and does so if you can)
 	void pickup_bullet()
 	{
@@ -36,7 +36,7 @@ public partial class Inventory : Node2D
 			if (area.Name == "BulletCollectArea" && cylinder_slots[current_cylinder_slot] == null)
 			{
                 //INSANE FEATURE CHANGE
-                if(area.GetParent<BulletBase>().dormant) return;
+                if(!area.GetParent<BulletBase>().dormant) return;
 				BulletBase instance =  area.GetParent<BulletBase>();
 				BulletBase clone = instance.Duplicate() as BulletBase;
 				instance.QueueFree();

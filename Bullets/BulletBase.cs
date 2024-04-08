@@ -27,6 +27,7 @@ public partial class BulletBase : RigidBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+        GD.Print(dormant);
 	}
 
     public override void _PhysicsProcess(double delta)
