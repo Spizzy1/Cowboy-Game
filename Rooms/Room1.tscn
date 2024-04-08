@@ -1,15 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d277qpqw87j4r"]
-
-[ext_resource type="Script" path="res://Rooms/test2.cs" id="1_yqioj"]
+[gd_scene load_steps=3 format=3 uid="uid://d277qpqw87j4r"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4sebv"]
 vertices = PackedVector2Array(1006, 316, -46, 316, 428, 54, 1006, -232, 228, 54, -46, -232, 228, -146, 428, -146)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 2, 1), PackedInt32Array(4, 1, 5, 6), PackedInt32Array(6, 5, 3, 7), PackedInt32Array(3, 2, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-56, -242, 1016, -242, 1016, 326, -56, 326), PackedVector2Array(238, -136, 238, 44, 418, 44, 418, -136)])
 source_geometry_group_name = &"navigation_polygon_source_group"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_stcrq"]
-size = Vector2(40, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jp8lc"]
 size = Vector2(40, 40)
@@ -20,76 +15,6 @@ size = Vector2(40, 40)
 position = Vector2(96, 282)
 navigation_polygon = SubResource("NavigationPolygon_4sebv")
 metadata/_edit_group_ = true
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(634, 217)
-scale = Vector2(0.682982, 0.682982)
-collision_layer = 8
-collision_mask = 13
-script = ExtResource("1_yqioj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_stcrq")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D"]
-target_desired_distance = 500.0
-path_max_distance = 10000.0
-avoidance_enabled = true
-radius = 500.0
-debug_enabled = true
-
-[node name="ColorRect" type="ColorRect" parent="CharacterBody2D"]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-position = Vector2(843, 298)
-scale = Vector2(0.682982, 0.682982)
-collision_layer = 8
-collision_mask = 13
-script = ExtResource("1_yqioj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-shape = SubResource("RectangleShape2D_stcrq")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D2"]
-target_desired_distance = 500.0
-path_max_distance = 10000.0
-avoidance_enabled = true
-radius = 191.81
-neighbor_distance = 482.05
-debug_enabled = true
-
-[node name="ColorRect" type="ColorRect" parent="CharacterBody2D2"]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-
-[node name="CharacterBody2D3" type="CharacterBody2D" parent="."]
-position = Vector2(953, 166)
-scale = Vector2(0.682982, 0.682982)
-collision_layer = 8
-collision_mask = 13
-script = ExtResource("1_yqioj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3"]
-shape = SubResource("RectangleShape2D_stcrq")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D3"]
-target_desired_distance = 500.0
-path_max_distance = 10000.0
-avoidance_enabled = true
-max_neighbors = 1
-debug_enabled = true
-
-[node name="ColorRect" type="ColorRect" parent="CharacterBody2D3"]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(40, 1.43051e-06)
