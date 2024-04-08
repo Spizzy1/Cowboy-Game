@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://e52hhxr6547x"]
 
 [ext_resource type="Script" path="res://Enemies/Stråtrövare.cs" id="1_gab82"]
-[ext_resource type="Script" path="res://Enemies/StateMachine.cs" id="2_aidwf"]
+[ext_resource type="Script" path="res://States/StateMachine.cs" id="2_aidwf"]
 [ext_resource type="Script" path="res://Enemies/Standoff.cs" id="3_h7n25"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_li6y8"]

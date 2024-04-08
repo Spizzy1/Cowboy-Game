@@ -46,6 +46,8 @@ public partial class test2 : CharacterBody2D
         Vector2 nextPathPosition = _navigationAgent.GetNextPathPosition();
 
         Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * _movementSpeed;
+
+        //GD.Print(currentAgentPosition.DistanceTo(MovementTarget));
         MoveAndSlide();
     }
 
