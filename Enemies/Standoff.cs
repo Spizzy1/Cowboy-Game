@@ -15,7 +15,7 @@ public partial class Standoff : State
 
     public override void Update(float delta)
     {
-        _distance = 100 / (GetParent().GetParent().GetParent().GetNode<Stråtrövare>("Stråtrövare").distanceToTarget);
+        _distance = 1000 / (GetParent().GetParent().GetParent().GetNode<Stråtrövare>("Stråtrövare").distanceToTarget);
 
         GD.Print("_distance: "+_distance);
         var random = new RandomNumberGenerator();

@@ -46,7 +46,7 @@ public partial class Stråtrövare : CharacterBody2D
 
         Vector2 currentAgentPosition = GlobalTransform.Origin;
         Vector2 nextPathPosition = _navigationAgent.GetNextPathPosition();
-
+        if()
         Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * _movementSpeed;
 
 
