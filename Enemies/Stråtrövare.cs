@@ -37,7 +37,7 @@ public partial class Stråtrövare : CharacterBody2D
     {
         base._PhysicsProcess(delta);
 
-        MovementTarget = GetParent().GetNode<CharacterBody2D>("Player1").Position; 
+        //MovementTarget = GetParent().GetNode<CharacterBody2D>("Player1").Position; 
 
         if (_navigationAgent.IsNavigationFinished())
         {
@@ -46,14 +46,19 @@ public partial class Stråtrövare : CharacterBody2D
 
         Vector2 currentAgentPosition = GlobalTransform.Origin;
         Vector2 nextPathPosition = _navigationAgent.GetNextPathPosition();
-        if()
-        Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * _movementSpeed;
+
+        //distanceToTarget = currentAgentPosition.DistanceTo(MovementTarget);
+
+        if(this.GetNode<Attacking>("Attacking")._attacking==true){
+            Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * _movementSpeed;
+        }
+        
 
 
         
-        distanceToTarget = currentAgentPosition.DistanceTo(MovementTarget);
         
-        GD.Print(":) "+distanceToTarget);
+        
+        //GD.Print(":) "+distanceToTarget);
         
         MoveAndSlide();
     }

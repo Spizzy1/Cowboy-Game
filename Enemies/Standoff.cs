@@ -15,9 +15,12 @@ public partial class Standoff : State
 
     public override void Update(float delta)
     {
-        _distance = 1000 / (GetParent().GetParent().GetParent().GetNode<Stråtrövare>("Stråtrövare").distanceToTarget);
+        _distance = 1 / (GetParent().GetParent().GetParent().GetNode<Stråtrövare>("Stråtrövare").distanceToTarget);
+
+        
 
         GD.Print("_distance: "+_distance);
+        GD.Print("distanceToTarget: "+GetParent().GetParent().GetParent().GetNode<Stråtrövare>("Stråtrövare").distanceToTarget);
         var random = new RandomNumberGenerator();
         random.Randomize();
 
@@ -27,6 +30,7 @@ public partial class Standoff : State
 
         if(_aggro>_distance){
             GD.Print("ARGGHHH NU ÄR JAG ARGGGG!!!! !!1!");
+            fsm.TransitionTo("Attacking");
         }
         else{
             GD.Print("inte arg :))");
