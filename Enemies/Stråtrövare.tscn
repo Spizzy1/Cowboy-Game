@@ -30,6 +30,7 @@ grow_vertical = 2
 color = Color(1, 0, 0, 1)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
 
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource("2_aidwf")
